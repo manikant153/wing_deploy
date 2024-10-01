@@ -14,8 +14,11 @@ app.use(express.json());
 
 // Use methodOverride to enable HTTP verbs like PUT, PATCH, DELETE in forms
 app.use(methodOverride('_method')); // Add this line
+
+// ========================Golden point while deploying to render==============================
 app.use(express.static('public'));
 app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
+// ========================Golden point while deploying to render==============================
 // Connect to the database
 connectDB();
 // Using layouts and ejs
