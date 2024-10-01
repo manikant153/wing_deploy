@@ -1,0 +1,42 @@
+<div class="image-card">
+  <% if(mobiles.length > 0){%><% for (let i = 0; i < mobiles.length; i++) { %>
+    <div class="card">
+      <a href="/add-mobile/<%= mobiles[i]._id %>">
+        <img src="/<%= mobiles[i].image.replace('public\\', '') %>" class="img-fluid rounded" alt="<%= mobiles[i].modelname %>" style="max-height: 300px;">
+      </a>
+      <div class="card-body">
+        <h4 class="card-title"><%= mobiles[i].modelname %></h4>
+        <div class="size-content">
+          <h6>Battery Health: <%= mobiles[i].batterhealth %></h6>
+          <h6>Warranty: <%= mobiles[i].warranty %></h6>
+          <h6>Buyed on: <%= mobiles[i].buyedDate %></h6>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item fs">Price: <%= mobiles[i].price %></li>
+        <li class="list-group-item fs">Quantity: 1</li>
+      </ul>
+      <div class="card-body center">
+        <a href="#" class="card-link"><i class="fa-regular fa-heart"></i></a>
+        <a href="#" class="card-link"><i class="fa-solid fa-trash-can"></i></a>
+        <a href="#" class="card-link"><i class="fa-solid fa-circle-plus"></i></a>
+      </div>
+    </div>
+  <% } %>
+  <% }else{%>
+    <div class="row">
+      <!-- <div class="col-3">
+          <img src="/img/human_3.svg" alt="Human pointing hand towards a create button">
+      </div> -->
+      <div class="col mt-mb-4">
+          <h2> Okay...</h2>
+          <h4>Let's start with your first note!<br /><br />
+              <a href="/add-mobile">Create one!</a>
+          </h4>
+      </div>
+  </div>
+  <% } %>
+
+
+  
+</div>

@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Add Mobile Details</h2>
+    <form action="/add-mobile" method="POST" enctype="multipart/form-data">
+        <!-- Brand -->
+        <div class="mb-3">
+            <label for="brand" class="form-label">Brand</label>
+            <input type="text" class="form-control" id="brand" name="brand" required>
+        </div>
+
+        <!-- Model Name -->
+        <div class="mb-3">
+            <label for="modelname" class="form-label">Model Name</label>
+            <input type="text" class="form-control" id="modelname" name="modelname" required>
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" required>
+        </div>
+
+        <!-- Warranty -->
+        <div class="mb-3">
+            <label for="warranty" class="form-label">Warranty</label>
+            <input type="text" class="form-control" id="warranty" name="warranty" required>
+        </div>
+
+        <!-- Battery Health -->
+        <div class="mb-3">
+            <label for="batterhealth" class="form-label">Battery Health</label>
+            <input type="text" class="form-control" id="batterhealth" name="batterhealth" required>
+        </div>
+
+        <!-- Any More Details -->
+        <div class="mb-3">
+            <label for="anymoredeatils" class="form-label">Any More Details</label>
+            <textarea class="form-control" id="anymoredeatils" name="anymoredeatils" rows="3"></textarea>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
