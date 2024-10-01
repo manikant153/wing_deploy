@@ -14,16 +14,10 @@ app.use(express.json());
 
 // Use methodOverride to enable HTTP verbs like PUT, PATCH, DELETE in forms
 app.use(methodOverride('_method')); // Add this line
-
+app.use(express.static('public'));
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 // Connect to the database
 connectDB();
-
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, '../public'))); // Updated path to serve static files
-
-// To upload the image
-app.use('/uploads', express.static(path.join(__dirname, '../public/uploads'))); // Updated path
-
 // Using layouts and ejs
 app.use(expressLayouts);
 app.set('layout', './layouts/main');
